@@ -1,4 +1,5 @@
 const testResult = (input) => {
+  // let counter = 0; first question
   let counter = [];
   input.forEach((pass) => {
     let range = [0, 127];
@@ -24,10 +25,15 @@ const testResult = (input) => {
         range[0] += Math.ceil((range[1] - range[0]) / 2);
       }
     }
+
+    //if (row * 8 + column > counter) { first question
+    //  counter = row * 8 + column;
+    // }
     counter.push(row * 8 + column);
   });
   let boi = counter.find((x) => {
     return !counter.includes(x + 1) && counter.includes(x + 2);
   });
+  //return counter first question
   return boi + 1;
 };
