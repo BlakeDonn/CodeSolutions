@@ -8,7 +8,8 @@ let rules = {
 let location = {
 "S": {"x":0, "y":0},
 "C": {"x":0, "y":0},
-"F": "D"
+"F": "D",
+"V": 3
 }
 
 let findEnd = (test)=>{
@@ -17,9 +18,12 @@ let findEnd = (test)=>{
       location.F = "U"
     }
     if(test[i] === "G"){
-    let rule = rules[location.F]
-    location.C[rule.a] rule.e
-    console.log(rule.e)
+      if(location.F === "D"){
+         if (location.F === "D") location.C.y -=1 
+         if (location.F === "U") location.C.y +=1
+      }
+      if (location.F === )
+    console.log(location.C, rules[location.F].a)
     }
   }
   
