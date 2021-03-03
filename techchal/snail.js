@@ -22,7 +22,7 @@ const snailSolver = (snail) =>{
   if(snail[x][y+1]){
     y++
   }
-    console.log(acc, x, y)
+    return acc
   }
 }
 snailSolver(arrayMatrix1)
